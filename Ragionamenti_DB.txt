@@ -1,0 +1,50 @@
+Considerazioni sulla generazione del Data Base
+
+1. Le tabelle che avrei pensato sono le seguenti:
+   - users
+   - medias
+   - posts
+   - like_user_post
+
+2. Realazioni tra le tabelle:
+   Un utente è legato ad uno o più post ma un post non è legato a più utenti ==> 1 to Many
+   Un utente è legato a uno o più media ma un media non può essere legato a più utenti ==> 1 to Many
+   Un post può fare riferimento a diversi media ma un media non può fare riferimento a più post ==> 1 to Many
+   Ad un utente possono piacere più post ma lo stesso post può piacere a più utenti ==> Many to Many
+
+   La cartella like_user_post è una specie di cartella poste che lega la caretlla users e quella posts atraaverso un "like"
+
+3. Struttura delle tabelle:
+   users
+   ------------------------
+   id: PK, AI, BIGINT 
+   name: VARCHAR(60) NOTNULL 
+   surname: VARCHAR(60) NOTNULL 
+   date_of_birth: DATE NULL  
+   email: VARCHAR(30) NULL 
+   city_residence: VARCHAR(30) NULL
+
+   medias
+   -------------------------
+   id: PK, AI, BIGINT 
+   title: VARCHAR(100) NOTNULL
+   user_id: FK 
+   link_picture: VARCHAR(150)
+   link_video: VARCHAR(150)
+   creation_date: DATE
+   modification_date: DATE NULL
+
+   posts 
+   -------------------------
+   id: PK, AI, BIGINT 
+   title: VARCHAR(100) NOTNULL
+   user_id: FK
+   creation_date: DATE 
+   modification_date: DATE NULL
+
+   like_user_post
+   --------------------------
+   id: PK, AI, BIGINT 
+   user_id: FK
+   post_id: FK 
+    
