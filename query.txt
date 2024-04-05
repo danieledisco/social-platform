@@ -1,0 +1,14 @@
+1. Seleziona gli utenti che hanno postato almeno un video
+---------------------------------------------------------
+SELECT `users`.`username` 
+FROM `medias` 
+JOIN `users` ON `medias`.`user_id` = `users`.`id` 
+WHERE `medias`.`type` = "video";
+
+
+2. Seleziona tutti i post senza Like (13)
+-----------------------------------------
+SELECT * 
+FROM `posts` 
+WHERE `posts`.`id` NOT IN (
+    SELECT `post_id` FROM `likes`);
