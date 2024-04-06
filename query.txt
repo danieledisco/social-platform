@@ -12,3 +12,11 @@ SELECT *
 FROM `posts` 
 WHERE `posts`.`id` NOT IN (
     SELECT `post_id` FROM `likes`);
+
+3. Conta il numero di like per ogni post (165)==> a me 175
+----------------------------------------------------------
+SELECT COUNT(*) 
+AS `number_of_likes` , post_id AS `post_number` 
+FROM `likes` 
+GROUP BY `post_id`;
+
