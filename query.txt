@@ -20,3 +20,9 @@ AS `number_of_likes` , post_id AS `post_number`
 FROM `likes` 
 GROUP BY `post_id`;
 
+4. Ordina gli utenti per il numero di media caricati (25) 
+SELECT
+COUNT(*) AS `number_of_medias` , `medias`.`user_id` AS `user_identify` 
+FROM `medias` 
+GROUP BY `medias`.`user_id`
+ORDER BY `number_of_medias` ASC;
