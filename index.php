@@ -12,15 +12,29 @@
 </head>
 
 <body>
-    <?php
+    <!--    <?php
     if (!$connection = connect_db('db-milestone')):
         die;
     endif;
+    ?> -->
 
-    var_dump($connection);
+    <div class="container">
+        <nav>
+            <a href="/PHP/social-platform/index.php">HOME</a>
+            <a href="/PHP/social-platform/view_db.php">View Data Base</a>
+
+        </nav>
 
 
-    ?>
+
+
+        <!--       <?php var_dump($connection); ?> -->
+    </div>
+
+
+
+
+
 
     <?php require_once __DIR__ . '/app/layout/footer.php'; ?>
 </body>

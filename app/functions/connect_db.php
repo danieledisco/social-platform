@@ -2,7 +2,7 @@
 /**
  * Function that establishe a connectio to a data base
  * @param string $db_name
- * @return object $connection in case of succecc null in case of insuccess
+ * @return object|null $connection in case of success|insuccess
  */
 function connect_db($db_name)
 {
@@ -17,10 +17,12 @@ function connect_db($db_name)
 
     // Verify if the connection has been established
     if ($connection && $connection->connect_error) {
+        // Ridirigere su di una pagina di errore il messaggio (v strongPassword)
         echo 'Connection failed: ' . $connection->connect_error;
-        $connection = null;
+    } else {
+        return $connection;
     }
 
-    return $connection;
+
 
 }
