@@ -5,11 +5,11 @@
 }
 
 :root {
-    --oop-1-light: white;
-    --oop-1-dark: black;
-    --oop-1-body-bg: lightgray;
-    --oop-1-card-bg: rgb(10, 103, 103);
-    --oop-1-header-footer-bg: rgb(26, 39, 37);
+    --ms4-light: white;
+    --ms4-dark: black;
+    --ms4-body-bg: lightgray;
+    --ms4-card-bg: rgb(10, 103, 103);
+    --ms4-header-footer-bg: rgb(26, 39, 37);
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 
 .container {
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 
@@ -34,25 +34,37 @@ img {
     text-align: center;
 }
 
+a {
+    padding: 0.2rem;
+    color: var(--ms4-light);
+    text-decoration: none;
+}
 
 nav {
-    text-align: center;
+    background-color: var(--ms4-header-footer-bg);
+    color: var(--ms4-light);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    border: 2px solid black;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    background-color: var(--oop-1-header-footer-bg);
-    color: var(--oop-1-light);
+    background-color: var(--ms4-header-footer-bg);
+    color: var(--ms4-light);
     padding: 2rem;
     text-align: center;
 }
 
 header {
-    background-color: var(--oop-1-header-footer-bg);
-    color: var(--oop-1-light);
+    background-color: var(--ms4-header-footer-bg);
+    color: var(--ms4-light);
     padding: 2rem;
     text-align: center;
 }
