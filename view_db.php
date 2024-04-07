@@ -12,6 +12,9 @@
 
 <body>
     <div class="container">
+        <nav>
+            <a href="/PHP/social-platform/index.php">HOME</a>
+        </nav>
         <img src="./schema.png" alt="">
     </div>
     <?php require_once __DIR__ . '/app/layout/footer.php'; ?>

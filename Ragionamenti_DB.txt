@@ -12,7 +12,7 @@ Considerazioni sulla generazione del Data Base
    Un post può fare riferimento a diversi media ma un media non può fare riferimento a più post ==> 1 to Many
    Ad un utente possono piacere più post ma lo stesso post può piacere a più utenti ==> Many to Many
 
-   La cartella like_user_post è una specie di cartella poste che lega la caretlla users e quella posts atraaverso un "like"
+   La cartella like_user_post è una specie di cartella ponte che lega la caretlla users e quella posts atraaverso un "like"
 
 3. Struttura delle tabelle:
    users
