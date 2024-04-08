@@ -8,8 +8,9 @@
     --ms4-light: white;
     --ms4-dark: black;
     --ms4-body-bg: lightgray;
-    --ms4-card-bg: rgb(10, 103, 103);
+    --ms4-title-color: rgb(19, 132, 132);
     --ms4-header-footer-bg: rgb(26, 39, 37);
+    --ms4-head-color: rgb(112, 8, 8);
 }
 
 body {
@@ -23,11 +24,49 @@ body {
     margin: auto;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+h2 {
+    text-align: center;
+    color: var(--ms4-title-color);
+    font-size: 2rem;
+    font-style: italic;
+    padding: 1rem;
 }
+
+
+
+.row {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >.head_username,
+    .head_nMedias {
+        font-size: 2rem;
+        color: var(--ms4-head-color);
+        font-weight: bold;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    >.data_username,
+    .data_nMedias {
+        font-size: 1.5rem;
+        color: var(--ms4-dark);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    >.data_nMedias {
+        margin-right: 7rem;
+    }
+
+}
+
+
+
 
 img {
     margin: 3rem;
