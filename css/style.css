@@ -63,6 +63,7 @@ h2 {
         margin-right: 7rem;
     }
 
+
 }
 
 
@@ -106,4 +107,13 @@ header {
     color: var(--ms4-light);
     padding: 2rem;
     text-align: center;
+}
+
+.postCard {
+    background-color: var(--ms4-dark);
+    color: var(--ms4-light);
+    border: 2px solid var(--ms4-dark);
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 0.5rem;
 }
