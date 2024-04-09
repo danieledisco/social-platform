@@ -1,14 +1,15 @@
 1. Seleziona gli utenti che hanno postato almeno un video
 ---------------------------------------------------------
-SELECT `users`.`username` 
+SELECT COUNT(`users`.`username`) AS `number_of_videos`, `users`.`username`
 FROM `medias` 
 JOIN `users` ON `medias`.`user_id` = `users`.`id` 
-WHERE `medias`.`type` = "video";
+WHERE `medias`.`type` = "video"
+GROUP BY (`users`.`username`);
 
 
 2. Seleziona tutti i post senza Like (13)
 -----------------------------------------
-SELECT * 
+SELECT `posts`.`title` 
 FROM `posts` 
 WHERE `posts`.`id` NOT IN (
     SELECT `post_id` FROM `likes`);
@@ -54,8 +55,9 @@ ORDER BY `number_of_medias` ASC;
 5.  Ordina gli utenti per totale di likes ricevuti nei loro posts (25) 
 ----------------------------------------------------------------------
 SELECT 
-COUNT(*) AS `number_of_likes`, `likes`.`user_id` AS `user_identify` 
-FROM `likes` 
+COUNT(*) AS `number_of_likes`, `users`.`username` 
+FROM `likes`
+JOIN `users` ON `likes`.`user_id` = `users`.`id`
 GROUP BY `likes`.`user_id` 
 ORDER BY `number_of_likes` ASC;
 
