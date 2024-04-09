@@ -12,17 +12,12 @@ function connect_db($db_name)
     define('DB_PASSWORD', 'root');
     define('DB_NAME', $db_name);
 
-    // Connectio to the data base
-    $connection = new mysqli(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-    // Verify if the connection has been established
-    if ($connection && $connection->connect_error) {
-        // Ridirigere su di una pagina di errore il messaggio (v strongPassword)
-        echo 'Connection failed: ' . $connection->connect_error;
-    } else {
-        return $connection;
+    // Connection and verify if the connection has been established
+    try {
+        $connection = new mysqli(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    } catch (Exception $e) {
+        header('Location: ./show_error.php');
+        die();
     }
-
-
-
+    return $connection;
 }

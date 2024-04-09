@@ -18,7 +18,7 @@ require_once __DIR__ . '/app/models/Post.php';
     <main>
         <div class="container">
             <nav>
-                <a href="/PHP/social-platform/index.php">HOME</a>
+                <a href="./index.php">HOME</a>
             </nav>
             <h2>STEP 4</h2>
 

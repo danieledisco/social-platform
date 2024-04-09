@@ -20,7 +20,7 @@ require_once __DIR__ . '/app/functions/extract_data_db.php';
 
         <div class="container">
             <nav>
-                <a href="/PHP/social-platform/index.php">HOME</a>
+                <a href="./index.php">HOME</a>
             </nav>
             <h2>STEP 3</h2>
             <div class="row">
@@ -32,10 +32,8 @@ require_once __DIR__ . '/app/functions/extract_data_db.php';
                 </div>
             </div>
             <?php
-            // Connection with the Data Base
-            if (!$connection = connect_db('db-milestone')):
-                die;
-            endif;
+
+            $connection = connect_db('db-milestone');
 
             // Define the query
             $sql = "SELECT
