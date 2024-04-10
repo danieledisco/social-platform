@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!empty($_SESSION['error'])) {
+    $message = $_SESSION['error'];
+    session_unset();
+}
 require_once __DIR__ . '/app/layout/header.php';
 ?>
 
@@ -18,9 +23,14 @@ require_once __DIR__ . '/app/layout/header.php';
             <nav>
                 <a href="./index.php">HOME</a>
             </nav>
-            <h2>Error</h2>
-            <h2>The connection to the database failed</h2>
-            <h2>Please check sintax and variables</h2>
+            <div class="lamp">
+                ERROR OCCURED!
+            </div>
+            <h2>Description:</h2>
+            <h2><?php echo $message; ?></h2>
+
+
+
         </div>
     </main>
     <?php require_once __DIR__ . '/app/layout/footer.php'; ?>

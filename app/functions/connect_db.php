@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Function that establishe a connectio to a data base
  * @param string $db_name
@@ -16,7 +17,9 @@ function connect_db($db_name)
     try {
         $connection = new mysqli(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
     } catch (Exception $e) {
+        $_SESSION['error'] = 'The connection to the database failed' . '<br>' . 'Please check syntax and variables';
         header('Location: ./show_error.php');
+
         die();
     }
     return $connection;

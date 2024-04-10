@@ -118,3 +118,18 @@ header {
     margin: 1rem;
     padding: 0.5rem;
 }
+
+.lamp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+    text-align: center;
+    animation: lamping 0.5s linear infinite;
+}
+
+@keyframes lamping {
+    50% {
+        opacity: 0;
+    }
+}

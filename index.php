@@ -20,6 +20,7 @@ require_once __DIR__ . '/app/layout/header.php';
             <a href="./index.php">HOME</a>
             <a href="./view_db.php">STEP 1</a>
             <a href="./step3.php">STEP 3</a>
+            <a href="./step3error.php">STEP 3 with error</a>
             <a href="./step4.php">STEP 4</a>
         </nav>
     </div>

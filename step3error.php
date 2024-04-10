@@ -35,7 +35,7 @@ require_once __DIR__ . '/app/functions/extract_data_db.php';
             </div>
             <?php
 
-            $connection = connect_db('db-milestone');
+            $connection = connect_db('dbmilestone');
 
             // Define the query
             $sql = "SELECT
