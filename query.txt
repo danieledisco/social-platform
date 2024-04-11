@@ -1,3 +1,5 @@
+Descrizione delle 5 query
+
 1. Seleziona gli utenti che hanno postato almeno un video
 ---------------------------------------------------------
 SELECT COUNT(`users`.`username`) AS `number_of_videos`, `users`.`username`

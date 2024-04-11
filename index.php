@@ -1,4 +1,9 @@
 <?php
+// Pagina principale che funge da home dell'applicazione.
+// Tramite questa pagina è possibile raggiungere altre pagine in cui sono riportati i
+// risultati relati agli STEP1, STEP3 e STEP4 (lo STEP2 è contenuto in una pagina txt)
+//
+// Aggiunta l'header della pagina
 require_once __DIR__ . '/app/layout/header.php';
 ?>
 
@@ -13,9 +18,8 @@ require_once __DIR__ . '/app/layout/header.php';
 </head>
 
 <body>
-
-
     <div class="container">
+        <!-- Menu di navigazione per esplorare i vari STEP della MILESTONE -->
         <nav>
             <a href="./index.php">HOME</a>
             <a href="./view_db.php">STEP 1</a>
@@ -24,7 +28,10 @@ require_once __DIR__ . '/app/layout/header.php';
             <a href="./step4.php">STEP 4</a>
         </nav>
     </div>
-    <?php require_once __DIR__ . '/app/layout/footer.php'; ?>
+    <?php
+    // Aggiunt il footer della pagina 
+    require_once __DIR__ . '/app/layout/footer.php';
+    ?>
 </body>
 
 </html>

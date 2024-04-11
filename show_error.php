@@ -1,9 +1,17 @@
 <?php
+/**
+ * Pagina utilizzata per mostrare un errore accaduto nell'applicazione
+ **********************************************************************
+
+ * Estrazione dalla variabile globale $_SESSION[] del messaggio che descrive l'errore accaduto
+ */
 session_start();
 if (!empty($_SESSION['error'])) {
     $message = $_SESSION['error'];
     session_unset();
 }
+
+// Inserimento dell'header della pagina
 require_once __DIR__ . '/app/layout/header.php';
 ?>
 
@@ -27,13 +35,14 @@ require_once __DIR__ . '/app/layout/header.php';
                 ERROR OCCURED!
             </div>
             <h2>Description:</h2>
+            <!-- Inserimento del messaggio di errore arrivato tramite $_SESSION[] -->
             <h2><?php echo $message; ?></h2>
-
-
-
         </div>
     </main>
-    <?php require_once __DIR__ . '/app/layout/footer.php'; ?>
+    <?php
+    // Inserimento del footer della pagina 
+    require_once __DIR__ . '/app/layout/footer.php';
+    ?>
 </body>
 
 </html>

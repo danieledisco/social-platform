@@ -1,4 +1,6 @@
 <?php
+// Inserimento dell'header della pagina
+// Richiamo elle due classi Media e Post da istanziare e visualizzare in pagina
 require_once __DIR__ . '/app/layout/header.php';
 require_once __DIR__ . '/app/models/Media.php';
 require_once __DIR__ . '/app/models/Post.php';
@@ -18,12 +20,16 @@ require_once __DIR__ . '/app/models/Post.php';
     <main>
         <div class="container">
             <nav>
+                <!-- Menu per ritornare alla home -->
                 <a href="./index.php">HOME</a>
             </nav>
+            <!-- Titolo della pagina -->
             <h2>STEP 4</h2>
 
             <?php
-            // Creiamo 2 media, uno immagine uno video
+            // Istanziazione di due oggetti appartenenti alla classe Media
+            // Un video
+            // Un immagine
             $mediaVideo = new Media(
                 13,
                 'http://www.example.com/waterfall-video.mp4',
@@ -38,7 +44,7 @@ require_once __DIR__ . '/app/models/Post.php';
                 'YES'
             );
 
-            // Creiao adesso i due post
+            // Istanziazione di due oggetti appartenenti alla classe Post in cui una proprietà è un oggetoo della calsse precedentemente istanziata Media
             $postVideo = new Post(
                 1313,
                 'The Waterfall',
@@ -54,6 +60,7 @@ require_once __DIR__ . '/app/models/Post.php';
             );
             ?>
 
+            <!-- Tramite il metodo displatPost della classe Post si mostrano tutte le caratteristiche dei due post -->
             <div class="postCard">
                 <?php $postVideo->displayPost() ?>
             </div>
@@ -67,7 +74,10 @@ require_once __DIR__ . '/app/models/Post.php';
 
         </div>
     </main>
-    <?php require_once __DIR__ . '/app/layout/footer.php'; ?>
+    <?php
+    // Inserimento del footer
+    require_once __DIR__ . '/app/layout/footer.php';
+    ?>
 </body>
 
 </html>
