@@ -1,7 +1,7 @@
 <?php
 /**
  * Class Media
- * Describe a media used in posts
+ * Descrive i media usati nei post
  * @author Daniele Disco
  * @license Boolean s.r.l
  * @copyright 2024 Daniele Disco
@@ -9,11 +9,11 @@
 class Media
 {
     /**
-     * @param int $id: Number identifyer media
-     * @param string $url: Uniform Resource Locator for the media
-     * @param string $type: Type of media: video or image
-     * @param string $title: The media title
-     * @param string $hasRight: If you have to pay copyright to use the media (default='NO')
+     * @param int $id: Numero identificante il media
+     * @param string $url: Uniform Resource Locator del media
+     * @param string $type: Tipo dio media: video or immagine
+     * @param string $title: Titolo del media
+     * @param string $hasRight: Se è necessario pagare dei diritti d'autore per usare il media (default='NO')
      */
     public function __construct(
         private int $id,
@@ -29,7 +29,7 @@ class Media
         $this->hasRight = $hasRight;
     }
 
-    // SET methods
+    // Metodi SETTER
     public function set_id(int $id)
     {
         $this->id = $id;
@@ -51,7 +51,7 @@ class Media
         $this->hasRight = $hasRight;
     }
 
-    // GET methods
+    // Metodi GETTER
     public function get_id()
     {
         return $this->id;

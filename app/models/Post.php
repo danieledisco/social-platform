@@ -1,7 +1,7 @@
 <?php
 /**
  * Class post
- * Describe post used in social platform
+ * Descrive il post usato nel social platform
  * @author Daniele Disco
  * @license Boolean s.r.l
  * @copyright 2024 Daniele Disco
@@ -9,10 +9,10 @@
 class Post
 {
     /**
-     * @param int $id: Number identifyer post
-     * @param string $title: The media title
-     * @param string $topic: The main argument the post refer 
-     * @param Media $media: A media shown in the post
+     * @param int $id: NUmero identificante il post
+     * @param string $title: Titolo del post
+     * @param string $topic: Argomento principale cui si riferisce il post 
+     * @param Media $media: Il media mostrato nel post
      */
     public function __construct(
         private int $id,
@@ -26,7 +26,7 @@ class Post
         $this->media = $media;
     }
 
-    // GET Methods
+    // Metodi GETTER
     public function get_id()
     {
         return $this->id;
@@ -44,7 +44,7 @@ class Post
         return $this->media;
     }
 
-    // SET Methods
+    // Metodi SETTER
     public function set_id(int $id)
     {
         $this->id = $id;
@@ -63,7 +63,7 @@ class Post
         $this->media = $media;
     }
 
-    // Fast way to display properties of post
+    // Metodo per stampare velocemente le caratteristiche del post
     public function displayPost()
     {
         echo "Post ID: " . $this->id . "<br>";

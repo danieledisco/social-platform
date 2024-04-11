@@ -1,6 +1,11 @@
 <?php
 
-
+/**
+ * Funzione che estrae i dati dal database selzionati mediante una query
+ * @param object $connection oggetto ottenuto dalla connessione al data base
+ * @param string $sql Stringa contenente la query
+ * @return array $out Array contenente oggetti istanza della classe dataDb con i dati estratti dal Data base 
+ */
 function extract_data_db($connection, $sql)
 {
     $result = $connection->query($sql);
