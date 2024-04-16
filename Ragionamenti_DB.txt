@@ -39,6 +39,7 @@ Considerazioni sulla generazione del Data Base
    id: PK, AI, BIGINT 
    title: VARCHAR(100) NOTNULL
    user_id: FK
+   tags: VARCHAR(100)
    creation_date: DATE 
    modification_date: DATE NULL
 
